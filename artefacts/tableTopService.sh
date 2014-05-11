@@ -3,12 +3,12 @@
 
 here=$(dirname $0)
 memOpts="-Xmx512M"
-httpPort=9540
-dbgPort=9502
-jmxPort=9503
+httpPort=9640
+dbgPort=9602
+jmxPort=9603
 ymlConfigFile="$here/tableTopService.yml"
-jar=$here/sal-service-fat.jar
-out=logs/sal-service.out
+jar=$here/tableTop-fat.jar
+out=logs/tableTop-service.out
 
 usage()
 {

@@ -1,15 +1,23 @@
 package com.tabletop.config;
 
-import javax.security.auth.login.AppConfigurationEntry;
-import javax.security.auth.login.Configuration;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.dropwizard.Configuration;
+import io.dropwizard.db.DataSourceFactory;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class TableTopConfiguration extends Configuration {
 
 
-    @Override
-    public AppConfigurationEntry[] getAppConfigurationEntry(String name) {
-        return new AppConfigurationEntry[0];
+    @NotEmpty
+    private DataSourceFactory database = new DataSourceFactory();
+
+    @JsonProperty("database")
+    public void setDatabase(DataSourceFactory database) {
+        this.database = database;
     }
 
-
+    @JsonProperty("database")
+    public DataSourceFactory getDataSourceFactory() {
+        return database;
+    }
 }

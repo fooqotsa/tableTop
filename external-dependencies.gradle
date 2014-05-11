@@ -6,10 +6,12 @@ ext {
     jettyVersion    = '9.0.7.v20131107'
     guavaVersion    = '16.0.1'
 
-    dropwizardVersion = "0.7.0-rc3"
+    dropwizardVersion = "0.7.0"
 
     dropwizard = ["io.dropwizard:dropwizard-core:${dropwizardVersion}",
                   "io.dropwizard:dropwizard-auth:${dropwizardVersion}",
+                  "io.dropwizard:dropwizard-assets:${dropwizardVersion}",
+                  "io.dropwizard:dropwizard-hibernate:${dropwizardVersion}",
                   "io.dropwizard:dropwizard-db:${dropwizardVersion}",
                   "io.dropwizard:dropwizard-views:${dropwizardVersion}"
     ]
