@@ -1,0 +1,74 @@
+ext {
+
+    jerseyVersion   = '1.18'
+    jacksonVersion  = '2.3.1'
+    logbackVersion  = '1.1.1'
+    jettyVersion    = '9.0.7.v20131107'
+    guavaVersion    = '16.0.1'
+
+    dropwizardVersion = "0.7.0-rc3"
+
+    dropwizard = ["io.dropwizard:dropwizard-core:${dropwizardVersion}",
+                  "io.dropwizard:dropwizard-auth:${dropwizardVersion}",
+                  "io.dropwizard:dropwizard-db:${dropwizardVersion}",
+                  "io.dropwizard:dropwizard-views:${dropwizardVersion}"
+    ]
+
+    google = [
+            guava: "com.google.guava:guava:${guavaVersion}",
+            gson: "com.google.code.gson:gson:1.4"
+    ]
+
+    hibernate = [
+            validator: 'org.hibernate:hibernate-validator:5.0.2.Final'
+    ]
+
+    jackson = [
+            core: "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}",
+            annotations: "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}",
+            databind: "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
+            dataformatYaml: "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:${jacksonVersion}",
+            dataformatXml: "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${jacksonVersion}",
+            datatypeGuava: "com.fasterxml.jackson.datatype:jackson-datatype-guava:${jacksonVersion}",
+            datatypeJoda: "com.fasterxml.jackson.datatype:jackson-datatype-joda:2.1.2", // use jacksonVersion if possible
+            jaxrs: "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:${jacksonVersion}",
+            afterburnerModule: "com.fasterxml.jackson.module:jackson-module-afterburner:${jacksonVersion}",
+            jaxbAnnotationsModule: "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:${jacksonVersion}"
+    ]
+
+    // Dropwizard includes Jersey core
+    jersey = [
+            client: "com.sun.jersey:jersey-client:${jerseyVersion}",
+            core: "com.sun.jersey:jersey-core:${jerseyVersion}",
+            json: "com.sun.jersey:jersey-json:${jerseyVersion}",
+            server: "com.sun.jersey:jersey-server:${jerseyVersion}",
+            servlet: "com.sun.jersey:jersey-servlet:${jerseyVersion}",
+            testCore: "com.sun.jersey.jersey-test-framework:jersey-test-framework-core:${jerseyVersion}",
+            testInMemory: "com.sun.jersey.jersey-test-framework:jersey-test-framework-inmemory:${jerseyVersion}"
+    ]
+
+    jetty = [
+            "org.eclipse.jetty:jetty-server:${jettyVersion}",
+            "org.eclipse.jetty:jetty-servlet:${jettyVersion}",
+            "org.eclipse.jetty:jetty-servlets:${jettyVersion}",
+            "org.eclipse.jetty:jetty-http:${jettyVersion}",
+            "org.eclipse.jetty:jetty-util:${jettyVersion}",
+            "org.eclipse.jetty.toolchain.setuid:jetty-setuid-java:1.0.2"
+    ]
+
+    joda = [
+            time: "joda-time:joda-time:2.3",
+            convert: "org.joda:joda-convert:1.6"
+    ]
+
+    junit = "junit:junit:4.11"
+
+    logback = [
+            "ch.qos.logback:logback-core:${logbackVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}"
+    ]
+
+    mustache = [
+            'com.github.spullara.mustache.java:compiler:0.8.14'
+    ]
+}
