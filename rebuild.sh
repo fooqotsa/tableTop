@@ -7,6 +7,7 @@ rm -f tableTop.tar.gz artefacts/*.jar
 nice gradle clean build fatJar $@
 
 cp -vf build/libs/tableTop-1.0-fat.jar artefacts/tableTop-1.0-fat.jar
+chmod 775 artefacts/tableTop-1.0-fat.jar
 
 ./artefacts/tableTopService.sh restart
 sleep 3

@@ -39,7 +39,7 @@ public class TableTopApplication extends Application<TableTopConfiguration> {
     }
 
     public static void main(String[] args) throws Exception {
-        final String yml = "tableTopService.yml";
+        final String yml = "tableTop.yml";
         if (args.length > 1) {
             new TableTopApplication().run(args);
         } else if (new File(yml).exists()) {

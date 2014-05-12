@@ -7,7 +7,7 @@ httpPort=9640
 dbgPort=9602
 jmxPort=9603
 ymlConfigFile="$here/tableTopService.yml"
-jar=$here/tableTop-fat.jar
+jar=$here/tableTop-1.0-fat.jar
 out=logs/tableTop-service.out
 
 usage()
